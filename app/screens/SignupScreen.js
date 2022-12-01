@@ -42,11 +42,11 @@ function SignupScreen({ navigation }) {
       })
       .catch((error) => {
         if (error.code === "auth/email-already-in-use") {
-          Alert.alert("Error", "That email address is already in use!")
+          Alert.alert("Error", "El correo está actualmente en uso!")
         }
 
         if (error.code === "auth/invalid-email") {
-          Alert.alert("Error", "That email address is invalid!")
+          Alert.alert("Error", "El correo es invalido!")
         }
 
         Alert.alert('ERROR: ', error.message);
@@ -88,7 +88,7 @@ function SignupScreen({ navigation }) {
         </View>
 
         <Text style={styles.join}>
-          Already a member?{" "}
+          ¿Ya tienes una cuenta?{" "}
           <Text
             onPress={() => navigation.navigate("UserLogin")}
             style={{ color: colors.primary }}
